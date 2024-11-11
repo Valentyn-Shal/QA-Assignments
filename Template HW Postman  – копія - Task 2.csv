@@ -1,0 +1,35 @@
+"Task 2: Створити колонку на дошці ліворуч (додати параметр pos=top; надати назву колонці - Left). 
+Розділ документації ”Lists”, підрозділ “Create a new List”.
+
+Додати тести: 
+- на перевірку статусу коду;
+- на перевірку часу запиту; 
+- на перевірку, що значення “name” це рядок.",,
+,,
+,Method,URL-запит з усіма path і query параметрами (вставте посилання в біле поле знизу)
+,POST,https://api.trello.com/1/lists?name=Left&idBoard=670d63747d13dfa2322bcf7c&key={{idkey}}&token={{idToken}}
+"Tests
+(вставте код в біле поле праворуч)","pm.test(""Status code is 200"", function () {
+    pm.response.to.have.status(200);
+});
+pm.test(""Response time is less than 1000ms"", function () {
+    pm.expect(pm.response.responseTime).to.be.below(1000);
+});
+pm.test(""Your test name"", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.name).to.be.a('string');
+});
+",
+Response Body (вставте код в біле поле праворуч),"{
+    ""id"": ""670d65a38bf4a423a5a74967"",
+    ""name"": ""Left"",
+    ""closed"": false,
+    ""color"": null,
+    ""idBoard"": ""670d63747d13dfa2322bcf7c"",
+    ""pos"": 256,
+    ""type"": null,
+    ""datasource"": {
+        ""filter"": false
+    },
+    ""limits"": {}
+}",

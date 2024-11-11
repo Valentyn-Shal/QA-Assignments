@@ -1,0 +1,91 @@
+"Task 5: Створити картку в правій колонці, яка була створена в Task 3. 
+Розділ документації ”Cards”, підрозділ “Create a new Card”.
+
+Додати тести: 
+- на перевірку статусу коду;
+- на перевірку часу запиту; 
+- на перевірку, що значення “id” це рядок.",,
+,,
+,Method,URL-запит з усіма path і query параметрами (вставте посилання в біле поле знизу)
+,POST,https://api.trello.com/1/cards?idList=670d686421ddecd0c0734f86&key={{idkey}}&token={{idToken}}
+"Tests
+(вставте код в біле поле праворуч)","pm.test(""Status code is 200"", function () {
+    pm.response.to.have.status(200);
+});
+pm.test(""Response time is less than 1000ms"", function () {
+    pm.expect(pm.response.responseTime).to.be.below(1000);
+});
+pm.test(""Your test name"", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.id).to.be.a('string');
+});
+",
+Response Body (вставте код в біле поле праворуч),"{
+    ""id"": ""670d694d1ca00b8357170863"",
+    ""badges"": {
+        ""attachmentsByType"": {
+            ""trello"": {
+                ""board"": 0,
+                ""card"": 0
+            }
+        },
+        ""externalSource"": null,
+        ""location"": false,
+        ""votes"": 0,
+        ""viewingMemberVoted"": false,
+        ""subscribed"": false,
+        ""attachments"": 0,
+        ""fogbugz"": """",
+        ""checkItems"": 0,
+        ""checkItemsChecked"": 0,
+        ""checkItemsEarliestDue"": null,
+        ""comments"": 0,
+        ""description"": false,
+        ""due"": null,
+        ""dueComplete"": false,
+        ""lastUpdatedByAi"": false,
+        ""start"": null
+    },
+    ""checkItemStates"": [],
+    ""closed"": false,
+    ""dueComplete"": false,
+    ""dateLastActivity"": ""2024-10-14T18:56:13.034Z"",
+    ""desc"": """",
+    ""descData"": {
+        ""emoji"": {}
+    },
+    ""due"": null,
+    ""dueReminder"": null,
+    ""email"": null,
+    ""idBoard"": ""670d63747d13dfa2322bcf7c"",
+    ""idChecklists"": [],
+    ""idList"": ""670d686421ddecd0c0734f86"",
+    ""idMembers"": [],
+    ""idMembersVoted"": [],
+    ""idShort"": 5,
+    ""idAttachmentCover"": null,
+    ""labels"": [],
+    ""idLabels"": [],
+    ""manualCoverAttachment"": false,
+    ""name"": """",
+    ""pinned"": false,
+    ""pos"": 49152,
+    ""shortLink"": ""jjJGq8Qg"",
+    ""shortUrl"": ""https://trello.com/c/jjJGq8Qg"",
+    ""start"": null,
+    ""subscribed"": false,
+    ""url"": ""https://trello.com/c/jjJGq8Qg/5--"",
+    ""cover"": {
+        ""idAttachment"": null,
+        ""color"": null,
+        ""idUploadedBackground"": null,
+        ""size"": ""normal"",
+        ""brightness"": ""dark"",
+        ""idPlugin"": null
+    },
+    ""isTemplate"": false,
+    ""cardRole"": null,
+    ""attachments"": [],
+    ""stickers"": [],
+    ""limits"": {}
+}",

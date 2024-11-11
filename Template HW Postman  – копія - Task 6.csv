@@ -1,0 +1,8 @@
+"Task 6: Видалити будь-яку картку, яка була створена в Task 4 або Task 5. Розділ документації “Cards”, підрозділ “Delete a Card”.",,
+,,
+,Method,URL-запит з усіма path і query параметрами (вставте посилання в біле поле знизу)
+,DELETE,https://api.trello.com/1/cards/670d67cc240251892275cee5?key={{idkey}}&token={{idToken}}
+,,
+Response Body (вставте код в біле поле праворуч),"{
+    ""limits"": {}
+}",
